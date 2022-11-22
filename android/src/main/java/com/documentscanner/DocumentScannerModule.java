@@ -50,8 +50,8 @@ public class DocumentScannerModule extends ReactContextBaseJavaModule{
             mat = new Mat();
             Utils.bitmapToMat(bitmap,mat);
             Imgproc.adaptiveThreshold(mat ,mat, 255, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C,Imgproc.THRESH_BINARY, 77, 10);
-            Imgcodecs.imwrite(path,mat);
-            callBack.invoke(path);
+            Imgcodecs.imwrite(uri,mat);
+            callBack.invoke(uri);
         } catch (IOException e) {
             e.printStackTrace();
             myFailureCallback.invoke("An error occurred when converting image to bitmap : ",e);
