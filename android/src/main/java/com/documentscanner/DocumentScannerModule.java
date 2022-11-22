@@ -42,9 +42,10 @@ public class DocumentScannerModule extends ReactContextBaseJavaModule{
     }
     
     @ReactMethod
-    public void procImage(String path, Callback callBack,Callback myFailureCallback) {
+    public void procImage(String uri, Callback callBack,Callback myFailureCallback) {
  
         try {
+            Uri path = Uri.parse(uri);
             bitmap = MediaStore.Images.Media.getBitmap(this.getCurrentActivity().getContentResolver(), path);
             mat = new Mat();
             Utils.bitmapToMat(bitmap,mat);
