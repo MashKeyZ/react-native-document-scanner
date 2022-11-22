@@ -22,6 +22,8 @@ import java.io.IOException;
  */
 
 public class DocumentScannerModule extends ReactContextBaseJavaModule{
+     Bitmap bitmap;
+     Mat mat;
 
     public DocumentScannerModule(ReactApplicationContext reactContext){
         super(reactContext);
