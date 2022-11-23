@@ -674,7 +674,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     }
     
      public void procIm(Mat m){
-          Imgproc.adaptiveThreshold(mat,mat, 255, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C,Imgproc.THRESH_BINARY, 77, 10);
+          Imgproc.adaptiveThreshold(m,m, 255, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C,Imgproc.THRESH_BINARY, 77, 10);
         
     }
 
